@@ -6,7 +6,7 @@ const el = document.getElementById('app');
 const app = createApp({
   render: () => h(App, {
     initialPage: JSON.parse(el.dataset.page),
-    resolveComponent: name => require(`./Pages/${name}`).default,
+    resolveComponent: name => require(`./Pages/${name}.vue`).default,
   }),
 });
 
